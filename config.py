@@ -23,10 +23,10 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", None))
+LOGGER_ID = int(getenv("LOGGER_ID", "-1003563951808"))
 
 # Get this value from @Harry_RoxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 6848223695))
+OWNER_ID = int(getenv("OWNER_ID", 6468293575))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -36,23 +36,23 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Learningbots79/Music",
+    "tg://user?id=6468293575",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/LearningBotsTeam")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/LearningBotssupport")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/uchihahostgp")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/uchihahost")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", True))
 
 
 # Get this credentials from https://developer.spotify.com/dashboard
-SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
+SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "414df719f85e45c9bd0ee5e83d08b501")
+SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "fa7e159a0b904b8b8505bf59b6458d3a")
 
 
 # Maximum limit for fetching playlist's track from youtube, spotify, apple links.
@@ -81,18 +81,18 @@ autoclean = []
 confirmer = {}
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://files.catbox.moe/10xn4h.jpg")
-PING_IMG_URL = getenv("PING_IMG_URL", "https://files.catbox.moe/10xn4h.jpg")
-PLAYLIST_IMG_URL = "https://files.catbox.moe/10xn4h.jpg"
-STATS_IMG_URL = "https://files.catbox.moe/10xn4h.jpg"
-TELEGRAM_AUDIO_URL = "https://files.catbox.moe/10xn4h.jpg"
-TELEGRAM_VIDEO_URL = "https://files.catbox.moe/10xn4h.jpg"
-STREAM_IMG_URL = "https://files.catbox.moe/10xn4h.jpg"
-SOUNCLOUD_IMG_URL = "https://files.catbox.moe/10xn4h.jpg"
-YOUTUBE_IMG_URL = "https://files.catbox.moe/10xn4h.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/10xn4h.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/10xn4h.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/10xn4h.jpg"
+START_IMG_URL = getenv("START_IMG_URL", "https://image.zaw-myo.workers.dev/image/69756ba3-35e2-475a-934f-830bdbf73e97")
+PING_IMG_URL = getenv("PING_IMG_URL", "https://image.zaw-myo.workers.dev/image/2c9c2a24-20d1-4ac7-ac01-a44ee34ffe83")
+PLAYLIST_IMG_URL = "https://image.zaw-myo.workers.dev/image/24fc3c10-395f-4df8-99e2-2a373b171998"
+STATS_IMG_URL = "https://image.zaw-myo.workers.dev/image/69756ba3-35e2-475a-934f-830bdbf73e97"
+TELEGRAM_AUDIO_URL = "https://image.zaw-myo.workers.dev/image/2c9c2a24-20d1-4ac7-ac01-a44ee34ffe83"
+TELEGRAM_VIDEO_URL = "https://image.zaw-myo.workers.dev/image/55f2147e-931e-4349-a714-907cc1d7be64"
+STREAM_IMG_URL = "https://image.zaw-myo.workers.dev/image/32a96366-b1c0-4371-a305-5a893045e358"
+SOUNCLOUD_IMG_URL = "https://image.zaw-myo.workers.dev/image/c249772d-541f-400e-a9a9-69b41fd8fddb"
+YOUTUBE_IMG_URL = "https://image.zaw-myo.workers.dev/image/2c9c2a24-20d1-4ac7-ac01-a44ee34ffe83"
+SPOTIFY_ARTIST_IMG_URL = "https://image.zaw-myo.workers.dev/image/32a96366-b1c0-4371-a305-5a893045e358"
+SPOTIFY_ALBUM_IMG_URL = "https://image.zaw-myo.workers.dev/image/c249772d-541f-400e-a9a9-69b41fd8fddb"
+SPOTIFY_PLAYLIST_IMG_URL = "https://image.zaw-myo.workers.dev/image/2c9c2a24-20d1-4ac7-ac01-a44ee34ffe83"
 
 
 def time_to_seconds(time):
