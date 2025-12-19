@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 CALLS_CLOSE = "calls_close"
-TIMEZONE = "Asia/Kolkata"
+TIMEZONE = "Asia/Yangon"
 
 
 def get_current_time():
