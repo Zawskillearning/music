@@ -1,6 +1,3 @@
-import uvloop
-uvloop.install()
-
 import asyncio
 from pyrogram import Client, errors
 from pyrogram.enums import ChatMemberStatus, ParseMode
@@ -42,31 +39,32 @@ class Anony(Client):
             )
         except (errors.ChannelInvalid, errors.PeerIdInvalid):
             LOGGER(__name__).error(
-                "❌ Unable to send message to the log group/channel. "
-                "Ensure the bot is added and not banned."
+                "❌ Bot ကို log group/channel ထဲ add မထားပါ"
             )
-            exit()
+            raise SystemExit
         except Exception as ex:
             LOGGER(__name__).error(
-                f"❌ Failed to access the log group/channel.\nReason: {type(ex).__name__}"
+                f"❌ Log group access မရပါ | {type(ex).__name__}"
             )
-            exit()
+            raise SystemExit
 
         try:
             member = await self.get_chat_member(config.LOGGER_ID, self.id)
             if member.status != ChatMemberStatus.ADMINISTRATOR:
                 LOGGER(__name__).error(
-                    "⚠️ Bot is not an admin in the log group/channel. Please promote it as admin."
+                    "⚠️ Bot ကို admin မပေးထားပါ"
                 )
-                exit()
+                raise SystemExit
         except Exception as ex:
             LOGGER(__name__).error(
-                f"❌ Failed to fetch bot status in log group. Reason: {type(ex).__name__}"
+                f"❌ Admin status စစ်မရ | {type(ex).__name__}"
             )
-            exit()
+            raise SystemExit
 
-        LOGGER(__name__).info(f"🎶 Bot is online and ready as {self.name} (@{self.username})")
+        LOGGER(__name__).info(
+            f"🎶 Bot Online: {self.name} (@{self.username})"
+        )
 
     async def stop(self):
-        LOGGER(__name__).info("🛑 Stopping LearningBots Bot...")
+        LOGGER(__name__).info("🛑 Stopping bot...")
         await super().stop()
